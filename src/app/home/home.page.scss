@@ -1,27 +1,141 @@
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  padding: 20px;
+  margin-top: 20px;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+#profile-picture
+{
+  margin-top: 10%;
+  margin-right: 10px;
 }
 
-#container p {
+.welcome-section {
+  h1 {
+    color: #667eea;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    border-color: #667eea;
+    border: solid;
+    border-radius: 8px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 24px;
+    color: #666;
+    margin: 0;
+  }
+}
+
+.profile-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+ion-tab-bar {
+  --background: #ffffff;
+  --color: #666666;
+  --color-selected: #667eea;
+  --border: 1px solid #e0e0e0;
+
+  ion-tab-button {
+    --color-selected: #667eea;
+    --color: #666666;
+  }
+}
+
+.tab-bar-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .stat-card {
+    --background: rgba(102, 126, 234, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  ion-tab-bar {
+    --background: #1a1a1a;
+  }
+}
+
+#container {
+  margin-top: 0%;
+}
+
+.empty-state {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
   font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+  opacity: 0.6;
 }
 
-#container a {
-  text-decoration: none;
+.job-list {
+  padding: 12px;
+  background: #000000;
+}
+
+.job-sliding {
+  margin-bottom: 14px;
+  overflow: hidden;  
+}
+
+.job-item {
+  --background: #000000;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border: solid;
+  border-color: #667eea;
+  border-radius: 8px;
+}
+
+.job-item:active {
+  transform: scale(0.98);
+}
+
+.job-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #7a7a7a;
+  margin-bottom: 6px;
+}
+
+.job-address {
+  font-size: 14px;
+  color: #7a7a7a;
+  margin-bottom: 4px;
+}
+
+.job-contact {
+  font-size: 14px;
+  color: #7a7a7a;
+  margin-bottom: 4px;
+}
+
+.job-note {
+  font-size: 13px;
+  color: #7a7a7a;
+  font-style: italic;
 }

@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>İş Ekle</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">Kapat</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-label position="floating">İş Adı</ion-label>
+    <ion-input [(ngModel)]="jobName"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Adres</ion-label>
+    <ion-input [(ngModel)]="address" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating" class="job-form-label">İletişim Bilgisi</ion-label>
+    <ion-input 
+      [(ngModel)]="contactInfo"
+      type="tel"
+      maxlength="17"
+      (ionInput)="formatPhone($event)"
+      class="job-form-phone"
+      pattern="^0\\s?\\(\\d{3}\\)\\s?\\d{3}\\s?\\d{2}\\s?\\d{2}$">
+    </ion-input>
+  </ion-item>   
+
+  <ion-item>
+    <ion-label position="floating">Not</ion-label>
+    <ion-input [(ngModel)]="note" type="text"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Kullanıcı Seç</ion-label>
+    <ion-select [(ngModel)]="selectedUser" placeholder="Seçiniz">
+      <ion-select-option *ngFor="let u of users" [value]="u.id">
+        {{ u.name }} ({{ u.role }})
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="block" class="ion-margin-top" (click)="submit()">
+    Kaydet
+  </ion-button>
+
+</ion-content>

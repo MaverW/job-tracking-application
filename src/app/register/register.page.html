@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Kayıt Ol</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <div class="register-container">
+    <div class="logo-section">
+      <div class="logo-title">
+        AN MEKANİK
+      </div>
+    </div>
+
+    <div class="form-section">
+      <ion-item lines="none" class="input-item">
+        <ion-input label="İsim" type="text" placeholder="Adınız" [(ngModel)]="username"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="input-item">
+        <ion-input label="Soyisim" type="text" placeholder="Soyadınız" [(ngModel)]="usersurname"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="input-item">
+        <ion-input label="E-mail" type="email" placeholder="abc@gmail.com" [(ngModel)]="email"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="input-item">
+        <ion-input type="password" label="Parola" placeholder="********" [(ngModel)]="password">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
+
+      <ion-item lines="none" class="input-item">
+        <ion-input type="password" label="Parola Tekrar" placeholder="********" [(ngModel)]="passwordAgain">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
+
+      <ion-button (click)="register()" expand="block" class="register-button">
+        Kayıt Ol
+      </ion-button>
+
+      <ion-button (click)="routeLogin()" expand="block" fill="clear" class="login-link-button">
+        Halihazırda Hesabım Var
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

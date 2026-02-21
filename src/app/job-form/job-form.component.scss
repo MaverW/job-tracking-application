@@ -1,0 +1,64 @@
+ion-content {
+  --background: #000000;
+}
+
+ion-item {
+  --background: #000000;
+  --border-radius: 14px;
+  --padding-start: 14px;
+  --inner-padding-end: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.job-form-label {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.job-form-phone {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+ion-select {
+  width: 100%;
+}
+
+ion-button {
+  --border-radius: 12px;
+  height: 48px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+ion-toolbar {
+  --background: #000000;
+  --border-color: transparent;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+ion-title {
+  font-weight: 600;
+}
+
+.floating-item {
+  position: relative;
+}
+
+/* Label normal hali */
+.floating-item ion-label {
+  transition: 0.2s ease;
+}
+
+/* Focus olunca yukarı taşı */
+.floating-item.ion-focused ion-label {
+  transform: translateY(-18px) scale(0.85);
+  color: #3b82f6;
+}
+
+/* Değer varsa da yukarıda kalsın */
+.floating-item.item-has-value ion-label {
+  transform: translateY(-18px) scale(0.85);
+}
