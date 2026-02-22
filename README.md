@@ -4,6 +4,19 @@ Modern bir iş takip uygulaması. Yöneticilerin günlük işleri ekleyip yönet
 
 ---
 
+<h2 align="center">Uygulama Görselleri</h2>
+
+<p align="center">
+  <img src="src/images/1.png" width="200">
+  <img src="src/images/2.png" width="200">
+  <img src="src/images/3.png" width="200">
+  <br>
+  <img src="src/images/4.png" width="200">
+  <img src="src/images/5.png" width="200">
+</p>
+
+---
+
 ## Kullanılan Teknolojiler
 
 * Ionic Framework
